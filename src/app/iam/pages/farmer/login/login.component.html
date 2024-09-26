@@ -1,0 +1,20 @@
+<div class="farmer-login-container">
+  <h1 class="title">Grow With Me</h1>
+  <h2 class="subtitle">Farmer Log-In</h2>
+  <label class="label">Select your Document type:</label>
+  <select class="list-box" name="documentType" [(ngModel)]="documentType" id="list-box">
+    <option value="DNI">DNI</option>
+    <option value="RUC">RUC</option>
+  </select>
+  <label class="label">Document ID:</label>
+  <br>
+  <input class="dni-input-field" [(ngModel)]="valueDocumentType" type="text" placeholder="DNI" id="DNI">
+  <input class="ruc-input-field" [(ngModel)]="valueDocumentType" type="text" placeholder="RUC" id="RUC">
+  <br> <br>
+  <label class="label">Password:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="Password">
+  <br> <br>
+  <button class="login-button" (click)="logIn()">Log-In</button>
+  <p routerLink="/signup-consultant" class="register-link">or Register</p>
+</div>
