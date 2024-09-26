@@ -1,0 +1,25 @@
+<div class="consultant-signup-container">
+  <h1 class="title">Grow With Me</h1>
+  <h2 class="subtitle">Consultant Sign-Up</h2>
+  <label class="label">Document ID:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="ID">
+  <br> <br>
+  <label class="label">E-mail:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="email" type="text" placeholder="E-mail">
+  <br> <br>
+  <label class="label">Phone:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="Phone">
+  <br> <br>
+  <label class="label">Password:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="Password">
+  <br> <br>
+  <label class="label">Confirm password:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="confirmPassword" type="text" placeholder="Confirm Password">
+  <br> <br>
+  <button class="signup-button" (click)="signUp()">Sign-Up</button>
+</div>

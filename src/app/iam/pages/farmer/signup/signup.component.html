@@ -1,0 +1,23 @@
+<div class="farmer-signup-container">
+  <h1 class="title">Grow With Me</h1>
+  <h2 class="subtitle">Farmer Sign-Up</h2>
+  <label class="label">Document Type:</label>
+  <select name="documentType" [(ngModel)]="documentType">
+    <option value="DNI">DNI</option>
+    <option value="RUC">RUC</option>
+  </select>
+  <br> <br>
+  <label class="label">Email:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="email" type="text" placeholder="E-mail">
+  <br> <br>
+  <label class="label">Phone:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="Phone">
+  <br> <br>
+  <label class="label">Password:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="Password">
+  <br> <br>
+  <button class="signup-button" routerLink="/login-farmer" (click)="signUp()">Sign-Up</button>
+</div>
