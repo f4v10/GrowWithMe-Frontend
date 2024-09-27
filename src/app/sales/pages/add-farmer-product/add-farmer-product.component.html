@@ -1,1 +1,58 @@
-<p>add-farmer-product works!</p>
+<div class="container">
+    <div class="header">
+      <button mat-raised-button color="primary" routerLink="/homepage">Volver</button>
+      <h1>Agregar producto del agricultor</h1>
+      <button mat-raised-button color="primary" routerLink="/home">Salir</button>
+    </div>
+    <div class="form-container">
+      <mat-card>
+        <form (ngSubmit)="addFarmerProduct()">
+          <div>
+            <mat-form-field>
+              <mat-label>Product ID</mat-label>
+              <input matInput [(ngModel)]="productId" name="productId" type="number">
+            </mat-form-field>
+          </div>
+  
+          <div>
+            <mat-form-field>
+              <mat-label>Money</mat-label>
+              <input matInput [(ngModel)]="money" name="money" type="text">
+            </mat-form-field>
+          </div>
+  
+          <div>
+            <mat-form-field>
+              <mat-label>Amount</mat-label>
+              <input matInput [(ngModel)]="amount" name="amount" type="number">
+            </mat-form-field>
+          </div>
+  
+          <div>
+            <mat-form-field>
+              <mat-label>Start</mat-label>
+              <input matInput [(ngModel)]="start" name="start" type="datetime-local">
+            </mat-form-field>
+          </div>
+  
+          <div>
+            <mat-form-field>
+              <mat-label>End</mat-label>
+              <input matInput [(ngModel)]="end" name="end" type="datetime-local">
+            </mat-form-field>
+          </div>
+  
+          <div>
+            <mat-form-field>
+              <mat-label>Quantity Product</mat-label>
+              <input matInput [(ngModel)]="quantityProduct" name="quantityProduct" type="number">
+            </mat-form-field>
+          </div>
+  
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+  
+  <app-footer class="footer-full-width"></app-footer>
