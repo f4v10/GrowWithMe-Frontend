@@ -1,1 +1,39 @@
-<p>sales-information works!</p>
+<div class="container">
+    <div class="header">
+      <button mat-raised-button color="primary" routerLink="/homepage">Volver</button>
+      <h1>Información de las Órdenes de Venta</h1>
+      <button mat-raised-button color="primary" routerLink="/home">Salir</button>
+    </div>
+    <div class="order-grid" *ngFor="let order of salesOrders">
+      <mat-card class="order-card">
+        <mat-card-header>
+          <mat-card-title>RUC: {{order.ruc}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <!-- Agrega un formulario para editar la orden -->
+          <form *ngIf="order.id === editingOrderId" #orderForm="ngForm">
+            <label>
+              Order Timestamp:
+              <input [(ngModel)]="editingOrder.orderTimestamp" name="orderTimestamp">
+            </label>
+            <label>
+              Invoice ID:
+              <input [(ngModel)]="editingOrder.invoiceId" name="invoiceId">
+            </label>
+            <button (click)="acceptChanges()">Aceptar</button>
+          </form>
+          <!-- Muestra la información de la orden si no se está editando -->
+          <div *ngIf="order.id !== editingOrderId">
+            <p>Order Timestamp: {{order.orderTimestamp}}</p>
+            <p>Invoice ID: {{order.invoiceId}}</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="startEditing(order)">Actualizar</button>
+          <button mat-button [routerLink]="['/homepage/sales/sales-order-list', order.id]">Ver Productos</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
+  <app-footer class="footer-full-width"></app-footer>
