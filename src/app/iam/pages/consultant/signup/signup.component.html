@@ -1,25 +1,25 @@
 <div class="consultant-signup-container">
   <h1 class="title">Grow With Me</h1>
-  <h2 class="subtitle">Consultant Sign-Up</h2>
-  <label class="label">Document ID:</label>
+  <h2 class="subtitle">{{ 'consultant-signup.subtitle'|translate }}</h2>
+  <label class="label">{{ 'consultant-signup.documentId'|translate }}:</label>
   <br>
-  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="ID">
+  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="{{ 'consultant-signup.documentId'|translate }}">
   <br> <br>
-  <label class="label">E-mail:</label>
+  <label class="label">{{ 'consultant-signup.email'|translate }}:</label>
   <br>
-  <input class="input-field" [(ngModel)]="email" type="text" placeholder="E-mail">
+  <input class="input-field" [(ngModel)]="email" type="text" placeholder="{{ 'consultant-signup.email'|translate }}">
   <br> <br>
-  <label class="label">Phone:</label>
+  <label class="label">{{ 'consultant-signup.phone'|translate }}:</label>
   <br>
-  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="Phone">
+  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="{{ 'consultant-signup.phone'|translate }}">
   <br> <br>
-  <label class="label">Password:</label>
+  <label class="label">{{ 'consultant-signup.password'|translate }}:</label>
   <br>
-  <input class="input-field" [(ngModel)]="password" type="text" placeholder="Password">
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'consultant-signup.password'|translate }}">
   <br> <br>
-  <label class="label">Confirm password:</label>
+  <label class="label">{{ 'consultant-signup.confirmPassword'|translate }}:</label>
   <br>
-  <input class="input-field" [(ngModel)]="confirmPassword" type="text" placeholder="Confirm Password">
+  <input class="input-field" [(ngModel)]="confirmPassword" type="text" placeholder="{{ 'consultant-signup.confirmPassword'|translate }}">
   <br> <br>
-  <button class="signup-button" (click)="signUp()">Sign-Up</button>
+  <button class="signup-button" (click)="signUp()">{{ 'consultant-signup.signUpButton'|translate }}</button>
 </div>

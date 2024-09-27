@@ -3,18 +3,20 @@ import {ConsultantUser} from "../../../model/consultant-user.entity";
 import {ConsultantUserService} from "../../../services/consultant-user.service";
 import {FormsModule} from "@angular/forms";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-signup',
+  selector: 'app-consultant-signup',
   standalone: true,
   imports: [
     FormsModule,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class SignupComponent implements OnInit {
+export class ConsultantSignupComponent implements OnInit {
   email = '';
   password = '';
   confirmPassword = '';

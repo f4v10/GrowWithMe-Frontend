@@ -1,24 +1,26 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {ConsultantUserService} from "../../../services/consultant-user.service";
 import {FarmerUser} from "../../../model/farmer-user.entity";
 import {FarmerUserService} from "../../../services/farmer-user.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-signup',
+  selector: 'app-farmer-signup',
   standalone: true,
   imports: [
     ReactiveFormsModule,
     RouterLink,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class SignupComponent implements OnInit {
+export class FarmerSignupComponent implements OnInit {
   email = "";
   password = "";
+  confirmPassword = "";
   documentType = "";
   valueDocumentType = "";
   phone = "";

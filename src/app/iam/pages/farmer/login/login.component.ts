@@ -4,19 +4,21 @@ import {FarmerUser} from "../../../model/farmer-user.entity";
 import {FarmerUserService} from "../../../services/farmer-user.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-farmer-login',
   standalone: true,
   imports: [
     ReactiveFormsModule,
     RouterLink,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnChanges, OnInit {
+export class FarmerLoginComponent implements OnChanges, OnInit {
   password = "";
   documentType = "";
   valueDocumentType = "";
