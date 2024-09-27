@@ -1,0 +1,29 @@
+/* Estilos para el formulario de agregar producto */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    margin-top: 10px;
+  }
+  
+  form select, form button {
+    margin-top: 5px;
+  }
+  
+  /* Estilos para la lista de productos */
+  .farmerProducts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .farmerProducts p {
+    margin: 5px 0;
+  }
+  .footer-full-width {
+    width: 100%;
+    padding: max(1rem, 1vw);
+  }

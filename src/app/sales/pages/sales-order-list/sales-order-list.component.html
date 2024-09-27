@@ -1,1 +1,25 @@
-<p>sales-order-list works!</p>
+<div class="container">
+    <h1>Orden de Venta {{id}}</h1>
+    <div class="order-details">
+      <p>RUC: {{salesOrder.ruc}}</p>
+      <p>Timestamp: {{salesOrder.orderTimestamp}}</p>
+      <p>Invoice ID: {{salesOrder.invoiceId}}</p>
+      <h2>Productos:</h2>
+      <div *ngFor="let product of salesOrder.farmerProductPriceIds">
+        <p>{{product}}</p>
+      </div>
+    </div>
+    <h2>Agregar Producto</h2>
+    <form (ngSubmit)="addProductToOrder(productId)">
+      <label for="productId">Producto:</label>
+      <select id="productId" [(ngModel)]="productId" name="productId" required>
+        <option *ngFor="let product of farmerProducts" [value]="product.id">
+          {{product.productId}} - Cantidad disponible: {{product.quantityProduct}}
+        </option>
+      </select>
+      <button type="submit">Agregar Producto</button>
+    </form>
+  
+  
+  </div>
+  <app-footer class="footer-full-width"></app-footer>
