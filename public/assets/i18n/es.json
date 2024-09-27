@@ -1,0 +1,36 @@
+{
+  "consultant-login": {
+    "subtitle": "Iniciar Sesión Consultor",
+    "documentId": "Documento de Identidad",
+    "password": "Contraseña",
+    "logInButton": "Iniciar Sesión",
+    "registerLink": "o Regístrese"
+  },
+  "consultant-signup": {
+    "subtitle": "Registrarse Consultor",
+    "documentId": "Documento de Identidad",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "signUpButton": "Registrarse"
+  },
+  "farmer-login": {
+    "subtitle": "Iniciar Sesión Agricultor",
+    "documentType": "Selecciona tu Tipo de Documento",
+    "documentId": "Documento de Identidad",
+    "password": "Contraseña",
+    "logInButton": "Iniciar Sesión",
+    "registerLink": "o Regístrese"
+  },
+  "farmer-signup": {
+    "subtitle": "Registrarse Agricultor",
+    "documentType": "Tipo de Documento",
+    "documentId": "Documento de Identidad",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "signUpButton": "Registrarse"
+  }
+}

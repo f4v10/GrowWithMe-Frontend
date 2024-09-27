@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Preferred Language</mat-label>
+  <mat-select [(value)]="currentLang" (selectionChange)="useLanguage($event.value)" aria-label="Preferred Language">
+    <mat-option *ngFor="let lang of languages" [value]="lang">
+      {{ lang.toUpperCase() }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

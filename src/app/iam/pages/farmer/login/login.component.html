@@ -1,0 +1,20 @@
+<div class="farmer-login-container">
+  <h1 class="title">Grow With Me</h1>
+  <h2 class="subtitle">{{ 'farmer-login.subtitle'|translate }}</h2>
+  <label class="label">{{ 'farmer-login.documentType'|translate }}:</label>
+  <select class="list-box" name="documentType" [(ngModel)]="documentType" id="list-box">
+    <option value="DNI">DNI</option>
+    <option value="RUC">RUC</option>
+  </select>
+  <br> <br>
+  <label class="label">{{ 'farmer-login.documentId'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="valueDocumentType" type="text" placeholder="{{ 'farmer-login.documentId'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'farmer-login.password'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'farmer-login.password'|translate }}">
+  <br> <br>
+  <button class="login-button" (click)="logIn()">{{ 'farmer-login.logInButton'|translate }}</button>
+  <p routerLink="/signup-consultant" class="register-link">{{ 'farmer-login.registerLink'|translate }}</p>
+</div>
