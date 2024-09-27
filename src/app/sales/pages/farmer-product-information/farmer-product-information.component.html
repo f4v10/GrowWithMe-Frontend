@@ -1,1 +1,53 @@
-<p>farmer-product-information works!</p>
+<div class="container">
+    <div class="header">
+      <button mat-raised-button color="primary" routerLink="/homepage">Volver</button>
+      <h1>Información de los Productos de los Agricultores</h1>
+      <button mat-raised-button color="primary" routerLink="/home">Salir</button>
+    </div>
+    <div class="product-grid" *ngFor="let product of farmerProducts">
+      <mat-card class="product-card">
+        <mat-card-header>
+          <mat-card-title>Product ID: {{product.productId}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <!-- Agrega un formulario para editar el producto -->
+          <form *ngIf="product.id === editingProductId" #productForm="ngForm">
+            <label>
+              Money:
+              <input [(ngModel)]="editingProduct.money" name="money">
+            </label>
+            <label>
+              Amount:
+              <input [(ngModel)]="editingProduct.amount" name="amount">
+            </label>
+            <label>
+              Start:
+              <input [(ngModel)]="editingProduct.start" name="start">
+            </label>
+            <label>
+              End:
+              <input [(ngModel)]="editingProduct.end" name="end">
+            </label>
+            <label>
+              Quantity Product:
+              <input [(ngModel)]="editingProduct.quantityProduct" name="quantityProduct">
+            </label>
+            <button (click)="acceptChanges()">Aceptar</button>
+          </form>
+          <!-- Muestra la información del producto si no se está editando -->
+          <div *ngIf="product.id !== editingProductId">
+            <p>Money: {{product.money}}</p>
+            <p>Amount: {{product.amount}}</p>
+            <p>Start: {{product.start}}</p>
+            <p>End: {{product.end}}</p>
+            <p>Quantity Product: {{product.quantityProduct}}</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="startEditing(product)">Actualizar</button>
+          <button mat-button (click)="deleteProduct(product.id)">Eliminar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <app-footer class="footer-full-width"></app-footer>
