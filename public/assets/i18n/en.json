@@ -1,0 +1,36 @@
+{
+  "consultant-login": {
+    "subtitle": "Consultant Log-In",
+    "documentId": "Document ID",
+    "password": "Password",
+    "logInButton": "Log-In",
+    "registerLink": "or Register"
+  },
+  "consultant-signup": {
+    "subtitle": "Consultant Sign-Up",
+    "documentId": "Document ID",
+    "email": "E-mail",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "signUpButton": "Sign-Up"
+  },
+  "farmer-login": {
+    "subtitle": "Farmer Log-In",
+    "documentType": "Select your Document Type",
+    "documentId": "Document ID",
+    "password": "Password",
+    "logInButton": "Log-In",
+    "registerLink": "or Register"
+  },
+  "farmer-signup": {
+    "subtitle": "Farmer Sign-Up",
+    "documentType": "Document Type",
+    "documentId": "Document ID",
+    "email": "E-mail",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "signUpButton": "Sign-Up"
+  }
+}

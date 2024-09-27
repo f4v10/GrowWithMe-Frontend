@@ -1,14 +1,14 @@
 <div class="consultant-login-container">
   <h1 class="title">Grow With Me</h1>
-  <h2 class="subtitle">Consultant Log-In</h2>
-  <label class="label">Document ID:</label>
+  <h2 class="subtitle">{{ 'consultant-login.subtitle'|translate }}</h2>
+  <label class="label">{{ 'consultant-login.documentId'|translate }}:</label>
   <br>
-  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="ID">
+  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="{{ 'consultant-login.documentId'|translate }}">
   <br> <br>
-  <label class="label">Password:</label>
+  <label class="label">{{ 'consultant-login.password'|translate }}:</label>
   <br>
-  <input class="input-field" [(ngModel)]="password" type="text" placeholder="Password">
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'consultant-login.password'|translate }}">
   <br> <br>
-  <button class="login-button" (click)="logIn()">Log-In</button>
-  <p routerLink="/signup-consultant" class="register-link">or Register</p>
+  <button class="login-button" (click)="logIn()">{{ 'consultant-login.logInButton'|translate }}</button>
+  <p routerLink="/signup-consultant" class="register-link">{{ 'consultant-login.registerLink'|translate }}</p>
 </div>

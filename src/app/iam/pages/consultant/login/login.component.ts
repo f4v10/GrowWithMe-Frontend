@@ -4,18 +4,20 @@ import {ConsultantUserService} from "../../../services/consultant-user.service";
 import {ConsultantUser} from "../../../model/consultant-user.entity";
 import {MatTableDataSource} from "@angular/material/table";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-consultant-login',
   standalone: true,
   imports: [
     FormsModule,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit {
+export class ConsultantLoginComponent implements OnInit {
   dni = "";
   password = "";
 
