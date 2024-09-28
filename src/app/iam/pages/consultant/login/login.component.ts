@@ -12,7 +12,7 @@ import {TranslateModule} from "@ngx-translate/core";
   imports: [
     FormsModule,
     RouterLink,
-    TranslateModule
+    TranslateModule,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
