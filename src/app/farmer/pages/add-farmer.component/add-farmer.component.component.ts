@@ -12,16 +12,29 @@
 // }
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {FarmerBeginnerService} from "../../service/farmer-beginner.service";
 import { FarmerBigService } from '../../service/farmer-big.service';
 import {FarmerBeginnerEntity} from "../../model/farmer-beginner.entity";
 import { FarmerBigEntity } from '../../model/farmer-big.entity';
+import {MatFormField} from "@angular/material/form-field";
+import {MatOption, MatSelect} from "@angular/material/select";
+import {MatInput} from "@angular/material/input";
+import {NgIf} from "@angular/common";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-add-farmer',
   standalone: true,
-  imports: [],
+  imports: [
+    ReactiveFormsModule,
+    MatFormField,
+    MatSelect,
+    MatOption,
+    MatInput,
+    NgIf,
+    MatButton
+  ],
   templateUrl: './add-farmer.component.component.html',
   styleUrl: './add-farmer.component.component.css'
 })

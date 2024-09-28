@@ -1,1 +1,65 @@
-<p>add-farmer.component works!</p>
+<h2>Add Farmer</h2>
+<form [formGroup]="farmerForm" (ngSubmit)="onSubmit()">
+
+  <!-- Farmer Type Dropdown -->
+  <mat-form-field appearance="fill">
+    <mat-label>Farmer Type</mat-label>
+    <mat-select formControlName="type">
+      <mat-option value="beginner">Beginner</mat-option>
+      <mat-option value="big">Big</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Email Input -->
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email">
+    <mat-error *ngIf="farmerForm.get('email')?.invalid && farmerForm.get('email')?.touched">
+      Please enter a valid email.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Phone Input -->
+  <mat-form-field appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput type="number" formControlName="phone">
+    <mat-error *ngIf="farmerForm.get('phone')?.invalid && farmerForm.get('phone')?.touched">
+      Please enter a valid phone number.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Social Reason Input -->
+  <mat-form-field appearance="fill">
+    <mat-label>Social Reason</mat-label>
+    <input matInput type="text" formControlName="socialReason">
+    <mat-error *ngIf="farmerForm.get('socialReason')?.invalid && farmerForm.get('socialReason')?.touched">
+      Social reason is required.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- DNI Input for Beginner Farmers -->
+  <div *ngIf="farmerType === 'beginner'">
+    <mat-form-field appearance="fill">
+      <mat-label>DNI</mat-label>
+      <input matInput type="text" formControlName="dni">
+      <mat-error *ngIf="farmerForm.get('dni')?.invalid && farmerForm.get('dni')?.touched">
+        DNI is required for beginner farmers.
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <!-- RUC Input for Big Farmers -->
+  <div *ngIf="farmerType === 'big'">
+    <mat-form-field appearance="fill">
+      <mat-label>RUC</mat-label>
+      <input matInput type="text" formControlName="ruc">
+      <mat-error *ngIf="farmerForm.get('ruc')?.invalid && farmerForm.get('ruc')?.touched">
+        RUC is required for big farmers.
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <!-- Submit Button -->
+  <button mat-raised-button color="primary" type="submit" [disabled]="farmerForm.invalid">Add Farmer</button>
+
+</form>
