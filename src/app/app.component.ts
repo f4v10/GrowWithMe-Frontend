@@ -5,11 +5,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {LanguageSwitcherComponent} from "./public/components/language-switcher/language-switcher.component";
 import {ConsultantLoginComponent} from "./iam/pages/consultant/login/login.component";
 import {FarmerLoginComponent} from "./iam/pages/farmer/login/login.component";
+import {ConsultantSignupComponent} from "./iam/pages/consultant/signup/signup.component";
+import {FarmerSignupComponent} from "./iam/pages/farmer/signup/signup.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule, LanguageSwitcherComponent, FarmerLoginComponent, ConsultantLoginComponent],
+  imports: [RouterOutlet, FontAwesomeModule, LanguageSwitcherComponent, FarmerLoginComponent, ConsultantLoginComponent, ConsultantSignupComponent, FarmerSignupComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
