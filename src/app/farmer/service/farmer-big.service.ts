@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class FarmerBeginnerService extends BaseService<FarmerBigEntity> {
+export class FarmerBigService extends BaseService<FarmerBigEntity> {
   constructor() {
     super();
     this.resourceEndPoint = '/farmer-beginner';
