@@ -9,6 +9,6 @@ export class ConsultantUserService extends BaseService<ConsultantUser>{
 
   constructor() {
     super();
-    this.resourceEndPoint = '/consultant-user';
+    this.resourceEndPoint = '/consultantUsers';
   }
 }

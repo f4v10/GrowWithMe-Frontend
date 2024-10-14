@@ -9,6 +9,6 @@ export class FarmerUserService extends BaseService<FarmerUser>{
 
   constructor() {
     super();
-    this.resourceEndPoint = '/farmer-user';
+    this.resourceEndPoint = '/farmerUsers';
   }
 }
