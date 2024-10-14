@@ -1,0 +1,36 @@
+{
+  "consultantUsers": [
+    {
+      "id": 1,
+      "email": "example@gmail.com",
+      "password": "123",
+      "dni": "12345678",
+      "phone": "9999999999"
+    },
+    {
+      "id": 2,
+      "email": "example2@gmail.com",
+      "password": "456",
+      "dni": "34567890",
+      "phone": "9999999991"
+    }
+  ],
+  "farmerUsers": [
+    {
+      "id": 1,
+      "email": "example3@gmail.com",
+      "password": "789",
+      "documentType": "RUC",
+      "valueDocumentType": "12345678901",
+      "phone": "9999999992"
+    },
+    {
+      "id": 2,
+      "email": "example4@gmail.com",
+      "password": "369",
+      "documentType": "DNI",
+      "valueDocumentType": "72727272",
+      "phone": "9999999993"
+    }
+  ]
+}
