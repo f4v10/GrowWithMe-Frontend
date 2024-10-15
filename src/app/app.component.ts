@@ -4,7 +4,6 @@ import {TranslateService} from "@ngx-translate/core";
 import {FooterComponent} from "./public/components/footer/footer.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,

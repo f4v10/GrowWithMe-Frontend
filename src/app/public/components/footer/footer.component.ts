@@ -3,14 +3,15 @@ import {NgOptimizedImage} from "@angular/common";
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {faFacebook, faInstagram, faYoutube} from '@fortawesome/free-brands-svg-icons';
 import {faX} from "@fortawesome/free-solid-svg-icons";
-
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [
     NgOptimizedImage,
-    FaIconComponent
+    FaIconComponent,
+    TranslateModule
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'

@@ -2,18 +2,15 @@
   <div class="group1">
     <div class="box">
       <figure>
-        <a href="#">
-          <img src="angular-icon.svg" alt="prueba logo">
-        </a>
+        <img src="../public/assets/images/GrowWithMeLogo.png" height="234" width="423" alt="GrowWithMe Logo"/>
       </figure>
     </div>
     <div class ="box">
-      <h2>About us</h2>
-      <p>Nosotros pertenecemos a la startup Cup of Tech</p>
-      <p>Hemos creado Grow With Me para ayudar a los pequeños y grandes agricultores</p>
+      <h2>{{ 'footer.aboutUs'|translate }}</h2>
+      <p>{{ 'footer.description'|translate }}</p>
     </div>
     <div class ="box">
-      <h2>Follow us</h2>
+      <h2>{{ 'footer.followUs'|translate }}</h2>
       <div class="social-media">
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
           <fa-icon [icon]="faFacebook" href="#"></fa-icon>
@@ -31,7 +28,7 @@
     </div>
   </div>
   <div class="group2">
-    <small>&copy; 2024 <b>Grow With Me</b> - Todos los Derechos Reservados.</small>
+    <small>{{ 'footer.copyright'|translate }}</small>
   </div>
 </footer>
 
