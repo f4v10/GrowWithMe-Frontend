@@ -32,5 +32,11 @@
     "password": "Contraseña",
     "confirmPassword": "Confirmar Contraseña",
     "signUpButton": "Registrarse"
+  },
+  "footer": {
+    "aboutUs": "Contáctanos",
+    "description": "Nosotros pertenecemos a la startup Cup of Tech y hemos creado Grow With Me para ayudar a los pequeños y grandes agricultores.",
+    "followUs": "Síguenos",
+    "copyright": "&copy; 2024 Grow With Me - Todos los Derechos Reservados."
   }
 }
