@@ -21,3 +21,4 @@ describe('LanguageSwitcherComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

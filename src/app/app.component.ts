@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {TranslateService} from "@ngx-translate/core";
-import {FooterComponent} from "./public/components/footer/footer.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import {LanguageSwitcherComponent} from "./public/components/language-switcher/language-switcher.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, FontAwesomeModule],
+  imports: [RouterOutlet, FontAwesomeModule, LanguageSwitcherComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
