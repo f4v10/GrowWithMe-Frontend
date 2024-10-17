@@ -1,8 +1,8 @@
 
 import { Routes } from '@angular/router';
-import { CropPageComponent } from './crop/pages/crop-page.component';
+import {CropsHomeComponent} from "./crop/pages/crops-home/crops-home.component";
 
 export const routes: Routes = [
-  { path: 'crops', component: CropPageComponent },
-  { path: '', redirectTo: '/crops', pathMatch: 'full' },
+  { path: 'crops', component: CropsHomeComponent },
+  { path: '', redirectTo: 'crops', pathMatch: 'full' },
 ];
