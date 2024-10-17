@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BaseService } from './base.service';
+import { CropService } from './crop.service';
 
-describe('BaseService', () => {
-  let service: BaseService<any>;
+describe('CropService', () => {
+  let service: CropService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(BaseService);
+    service = TestBed.inject(CropService);
   });
 
   it('should be created', () => {
