@@ -1,0 +1,32 @@
+{
+  "crops": [
+    {
+      "id": 1,
+      "code": "XY01",
+      "name": "Tomato",
+      "status": "Ready",
+      "cost": 50
+    },
+    {
+      "id": 2,
+      "code": "XY02",
+      "name": "Potato",
+      "status": "Ready",
+      "cost": 20
+    },
+    {
+      "id": 3,
+      "code": "XY03",
+      "name": "Onion",
+      "status": "Ready",
+      "cost": 30
+    },
+    {
+      "id": 4,
+      "code": "XY04",
+      "name": "Carrot",
+      "status": "Ready",
+      "cost": 40
+    }
+  ]
+}
