@@ -1,6 +1,6 @@
 
 import { Routes } from '@angular/router';
-import {CropsHomeComponent} from "./crop/pages/crops-home/crops-home.component";
+import {CropsHomeComponent} from "./crops/pages/crops-home/crops-home.component";
 
 export const routes: Routes = [
   { path: 'crops', component: CropsHomeComponent },
