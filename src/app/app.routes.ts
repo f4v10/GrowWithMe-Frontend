@@ -10,7 +10,7 @@ export const routes: Routes = [
   {path: 'farmer-signup', component: FarmerSignupComponent},
   {path: 'consultant-login', component: ConsultantLoginComponent},
   {path: 'consultant-signup', component: ConsultantSignupComponent},
-  {path: '/home/crops', component: CropsHomeComponent },
+  {path: 'home/crops', component: CropsHomeComponent },
   {path: '', redirectTo: '/farmer-login', pathMatch: 'full'},
   {path: '**', redirectTo: '/farmer-login'}
 ];
