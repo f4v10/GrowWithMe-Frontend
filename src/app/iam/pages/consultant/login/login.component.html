@@ -10,5 +10,6 @@
   <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'consultant-login.password'|translate }}">
   <br> <br>
   <button class="login-button" (click)="logIn()">{{ 'consultant-login.logInButton'|translate }}</button>
-  <p routerLink="/signup-consultant" class="register-link">{{ 'consultant-login.registerLink'|translate }}</p>
+  <p (click)="onNavigateRegister()" class="register-link">{{ 'consultant-login.registerLink'|translate }}</p>
+  <p (click)="onNavigateFarmerLogin()" class="farmer-link">{{ 'consultant-login.farmerLink'|translate }}</p>
 </div>

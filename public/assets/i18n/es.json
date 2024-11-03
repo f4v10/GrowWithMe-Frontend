@@ -4,7 +4,8 @@
     "documentId": "Documento de Identidad",
     "password": "Contraseña",
     "logInButton": "Iniciar Sesión",
-    "registerLink": "o Regístrese"
+    "registerLink": "o Regístrese",
+    "farmerLink": "Eres un Agricultor?"
   },
   "consultant-signup": {
     "subtitle": "Registrarse Consultor",
@@ -21,7 +22,8 @@
     "documentId": "Documento de Identidad",
     "password": "Contraseña",
     "logInButton": "Iniciar Sesión",
-    "registerLink": "o Regístrese"
+    "registerLink": "o Regístrese",
+    "consultantLink": "Eres un Consultor?"
   },
   "farmer-signup": {
     "subtitle": "Registrarse Agricultor",
@@ -32,6 +34,16 @@
     "password": "Contraseña",
     "confirmPassword": "Confirmar Contraseña",
     "signUpButton": "Registrarse"
+  },
+  "consultant-home": {
+    "title": "Consultor",
+    "monitoring": "Monitoreo",
+    "contracts": "Contratos"
+  },
+  "farmer-home": {
+    "title": "Agricultor",
+    "crops": "Cultivos",
+    "finance": "Finanzas"
   },
   "footer": {
     "aboutUs": "Contáctanos",

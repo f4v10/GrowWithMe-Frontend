@@ -4,7 +4,8 @@
     "documentId": "Document ID",
     "password": "Password",
     "logInButton": "Log-In",
-    "registerLink": "or Register"
+    "registerLink": "or Register",
+    "farmerLink": "Are you a Farmer?"
   },
   "consultant-signup": {
     "subtitle": "Consultant Sign-Up",
@@ -21,7 +22,8 @@
     "documentId": "Document ID",
     "password": "Password",
     "logInButton": "Log-In",
-    "registerLink": "or Register"
+    "registerLink": "or Register",
+    "consultantLink": "Are you a Consultant?"
   },
   "farmer-signup": {
     "subtitle": "Farmer Sign-Up",
@@ -32,6 +34,16 @@
     "password": "Password",
     "confirmPassword": "Confirm Password",
     "signUpButton": "Sign-Up"
+  },
+  "consultant-home": {
+    "title": "Consultant",
+    "monitoring": "Monitoring",
+    "contracts": "Contracts"
+  },
+  "farmer-home": {
+    "title": "Farmer",
+    "crops": "Crops",
+    "finance": "Finance"
   },
   "footer": {
     "aboutUs": "About Us",

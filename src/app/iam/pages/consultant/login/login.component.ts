@@ -45,6 +45,14 @@ export class ConsultantLoginComponent implements OnInit {
       this.dataSource.data = this.dataSource.data;
     })
 
-    this.router.navigate(['home']).then();
+    this.router.navigate(['/consultant/home']).then();
+  }
+
+  onNavigateRegister() {
+    this.router.navigate(['/consultant-signup']).then();
+  }
+
+  onNavigateFarmerLogin() {
+    this.router.navigate(['/farmer-login']).then();
   }
 }
