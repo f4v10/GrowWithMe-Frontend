@@ -45,6 +45,11 @@
     "crops": "Cultivos",
     "finance": "Finanzas"
   },
+  "toolbar": {
+    "home": "Inicio",
+    "signUp": "Registrarse",
+    "logIn": "Iniciar Sesión"
+  },
   "footer": {
     "aboutUs": "Contáctanos",
     "description": "Nosotros pertenecemos a la startup Cup of Tech y hemos creado Grow With Me para ayudar a los pequeños y grandes agricultores.",
