@@ -8,11 +8,12 @@ import {FarmerLoginComponent} from "./iam/pages/farmer/login/login.component";
 import {ConsultantSignupComponent} from "./iam/pages/consultant/signup/signup.component";
 import {FarmerSignupComponent} from "./iam/pages/farmer/signup/signup.component";
 import {FooterComponent} from "./public/components/footer/footer.component";
+import {ToolbarComponent} from "./public/components/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule, LanguageSwitcherComponent, FarmerLoginComponent, ConsultantLoginComponent, ConsultantSignupComponent, FarmerSignupComponent, FooterComponent],
+  imports: [RouterOutlet, FontAwesomeModule, LanguageSwitcherComponent, FarmerLoginComponent, ConsultantLoginComponent, ConsultantSignupComponent, FarmerSignupComponent, FooterComponent, ToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
