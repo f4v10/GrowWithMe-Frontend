@@ -1,0 +1,17 @@
+<div class="crops-home-container">
+  <h1 class="title">Crops</h1>
+  <button mat-stroked-button class="add-crop-button">Add crop</button>
+
+  <mat-card class="crops-details" appearance="outlined" *ngFor="let crop of crops">
+    <mat-card-header>
+      <mat-card-title>{{ crop.name }}</mat-card-title>
+      <mat-card-subtitle>{{ crop.code }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ crop.status }}</p>
+      <p>{{ crop.cost }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <button class="calendar-button" mat-stroked-button>Calendar</button>
+</div>
