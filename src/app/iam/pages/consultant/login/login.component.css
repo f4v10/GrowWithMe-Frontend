@@ -66,6 +66,10 @@
   margin-top: 10px;
 }
 
+.spacer {
+  flex: 1;
+}
+
 .farmer-link {
   color: blue;
   cursor: pointer;

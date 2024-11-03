@@ -80,6 +80,10 @@
   margin-top: 10px;
 }
 
+.spacer {
+  flex: 1;
+}
+
 .consultant-link {
   color: blue;
   cursor: pointer;
