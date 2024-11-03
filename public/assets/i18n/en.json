@@ -40,6 +40,11 @@
     "monitoring": "Monitoring",
     "contracts": "Contracts"
   },
+  "farmer-home": {
+    "title": "Farmer",
+    "crops": "Crops",
+    "finance": "Finance"
+  },
   "footer": {
     "aboutUs": "About Us",
     "description": "We belong to the startup Cup of Tech and we created Grow With Me to help small and big farmers.",

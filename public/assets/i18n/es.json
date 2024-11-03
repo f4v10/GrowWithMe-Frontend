@@ -40,6 +40,11 @@
     "monitoring": "Monitoreo",
     "contracts": "Contratos"
   },
+  "farmer-home": {
+    "title": "Agricultor",
+    "crops": "Cultivos",
+    "finance": "Finanzas"
+  },
   "footer": {
     "aboutUs": "Contáctanos",
     "description": "Nosotros pertenecemos a la startup Cup of Tech y hemos creado Grow With Me para ayudar a los pequeños y grandes agricultores.",
