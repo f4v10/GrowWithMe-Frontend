@@ -50,6 +50,6 @@ export class FarmerSignupComponent implements OnInit {
     };
     this.farmerUserService.create(user).subscribe((response: FarmerUser) => {})
 
-    this.router.navigate(['login-farmer']).then();
+    this.router.navigate(['/login-farmer']).then();
   }
 }
