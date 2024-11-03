@@ -1,0 +1,30 @@
+mat-button-toggle-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+mat-button-toggle {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #f2f2f2;
+  margin: 4px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+mat-button-toggle.mat-button-toggle-checked {
+  background-color: #85ff00;
+  color: white;
+}
+
+mat-button-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+mat-button-toggle:focus {
+  outline: 2px solid #a7f155;
+  outline-offset: 2px;
+}
