@@ -3,9 +3,9 @@ import {FarmerLoginComponent} from "./iam/pages/farmer/login/login.component";
 import {FarmerSignupComponent} from "./iam/pages/farmer/signup/signup.component";
 import {ConsultantLoginComponent} from "./iam/pages/consultant/login/login.component";
 import {ConsultantSignupComponent} from "./iam/pages/consultant/signup/signup.component";
-import {CropsHomeComponent} from "./crops/pages/crops-home/crops-home.component";
-import {ConsultantHomeComponent} from "./consultants/pages/consultant-home/consultant-home.component";
 import {FarmerHomeComponent} from "./farmers/pages/farmer-home/farmer-home.component";
+import {ConsultantHomeComponent} from "./consultants/pages/consultant-home/consultant-home.component";
+import {CropsHomeComponent} from "./crops/pages/crops-home/crops-home.component";
 
 export const routes: Routes = [
   {path: 'farmer-login', component: FarmerLoginComponent},
