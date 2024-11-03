@@ -15,7 +15,7 @@ import {ConsultantUser} from "../../../iam/model/consultant-user.entity";
   templateUrl: './farmer-home.component.html',
   styleUrl: './farmer-home.component.css'
 })
-export class FarmerHomeComponent implements OnInit{
+export class FarmerHomeComponent implements OnInit {
   protected invalidUrl: string;
   private route: ActivatedRoute = inject(ActivatedRoute);
   private router: Router = inject(Router);
