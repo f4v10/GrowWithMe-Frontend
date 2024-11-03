@@ -3,6 +3,7 @@ import {MatToolbar} from "@angular/material/toolbar";
 import {MatButton} from "@angular/material/button";
 import {ActivatedRoute, Router} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {LanguageSwitcherComponent} from "../language-switcher/language-switcher.component";
 
 @Component({
   selector: 'app-toolbar',
@@ -10,7 +11,8 @@ import {TranslateModule} from "@ngx-translate/core";
   imports: [
     MatToolbar,
     MatButton,
-    TranslateModule
+    TranslateModule,
+    LanguageSwitcherComponent
   ],
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.css'
