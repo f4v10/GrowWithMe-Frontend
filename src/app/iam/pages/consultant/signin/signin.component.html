@@ -10,5 +10,5 @@
   <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'consultant-signin.password'|translate }}">
   <br> <br>
   <button class="login-button" (click)="logIn()">{{ 'consultant-signin.logInButton'|translate }}</button>
-  <p routerLink="/signup-consultant" class="register-link">{{ 'consultant-signin.registerLink'|translate }}</p>
+  <p (click)="onNavigateConsultantSignUp()" class="register-link">{{ 'consultant-signin.registerLink'|translate }}</p>
 </div>

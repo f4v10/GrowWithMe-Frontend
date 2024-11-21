@@ -3,8 +3,9 @@
     "subtitle": "Consultant Log-In",
     "documentId": "Document ID",
     "password": "Password",
-    "logInButton": "Log-In",
-    "registerLink": "or Register"
+    "logInButton": "Sign-In",
+    "registerLink": "or Register",
+    "farmerLink": "Are you a Farmer?"
   },
   "consultant-signup": {
     "subtitle": "Consultant Sign-Up",
@@ -20,8 +21,9 @@
     "documentType": "Select your Document Type",
     "documentId": "Document ID",
     "password": "Password",
-    "logInButton": "Log-In",
-    "registerLink": "or Register"
+    "logInButton": "Sign-In",
+    "registerLink": "or Register",
+    "consultantLink": "Are you a Consultant?"
   },
   "farmer-signup": {
     "subtitle": "Farmer Sign-Up",
@@ -32,5 +34,26 @@
     "password": "Password",
     "confirmPassword": "Confirm Password",
     "signUpButton": "Sign-Up"
+  },
+  "consultant-home": {
+    "title": "Consultant",
+    "monitoring": "Monitoring",
+    "contracts": "Contracts"
+  },
+  "farmer-home": {
+    "title": "Farmer",
+    "crops": "Crops",
+    "finance": "Finance"
+  },
+  "toolbar": {
+    "home": "Home",
+    "signUp": "Sign-Up",
+    "logIn": "Sign-In"
+  },
+  "footer": {
+    "aboutUs": "About Us",
+    "description": "We belong to the startup Cup of Tech and we created Grow With Me to help small and big farmers.",
+    "followUs": "Follow us",
+    "copyright": "&copy; 2024 Grow With Me - All Rights Reserved."
   }
 }
