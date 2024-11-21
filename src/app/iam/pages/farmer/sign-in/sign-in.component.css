@@ -1,4 +1,4 @@
-.consultant-login-container {
+.farmer-login-container {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px auto;
@@ -29,16 +29,30 @@
   color: dodgerblue;
   text-align: left;
   display: block;
+  margin-left: 10px;
 }
 
 .input-field {
   width: calc(100% - 20px);
-  padding: 5px;
-  margin: 5px 0;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
   font-size: 1rem;
+  margin: 5px 0 5px 10px;
+}
+
+.list-box {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 5px 0 5px 10px;
+  appearance: none;
+  background-color: white;
+  cursor: pointer;
 }
 
 .login-button {
@@ -48,7 +62,7 @@
   background-color: #fff;
   color: green;
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -58,6 +72,20 @@
 }
 
 .register-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.consultant-link {
+  padding: 20px;
   color: blue;
   cursor: pointer;
   text-decoration: underline;

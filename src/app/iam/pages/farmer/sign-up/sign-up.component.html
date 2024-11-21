@@ -1,0 +1,31 @@
+<div class="farmer-signup-container">
+  <h1 class="title">Grow With Me</h1>
+  <h2 class="subtitle">{{ 'farmer-sign-up.subtitle'|translate }}</h2>
+  <label class="label">{{ 'farmer-sign-up.documentType'|translate }}:</label>
+  <select name="documentType" [(ngModel)]="documentType">
+    <option value="DNI">DNI</option>
+    <option value="RUC">RUC</option>
+  </select>
+  <br> <br>
+  <label class="label">{{ 'farmer-sign-up.documentId'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="valueDocumentType" type="text" placeholder="{{ 'farmer-sign-up.documentId'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'farmer-sign-up.email'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="email" type="text" placeholder="{{ 'farmer-sign-up.email'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'farmer-sign-up.phone'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="{{ 'farmer-sign-up.phone'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'farmer-sign-up.password'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'farmer-sign-up.password'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'farmer-sign-up.confirmPassword'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="confirmPassword" type="text" placeholder="{{ 'farmer-sign-up.confirmPassword'|translate }}">
+  <br> <br>
+  <button class="signup-button" (click)="signUp()">{{ 'farmer-sign-up.signUpButton'|translate }}</button>
+</div>

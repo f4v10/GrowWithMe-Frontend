@@ -6,15 +6,15 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-consultant-signup',
+  selector: 'app-consultant-sign-up',
   standalone: true,
   imports: [
     FormsModule,
     RouterLink,
     TranslateModule
   ],
-  templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.css'
 })
 export class ConsultantSignUpComponent implements OnInit {
   email = '';
@@ -37,7 +37,7 @@ export class ConsultantSignUpComponent implements OnInit {
     this.invalidUrl = this.route.snapshot.url.map(element => element.path).join('/');
   }
 
-  protected signUp() {
+  signUp() {
     const user: ConsultantUser = {
       id: 0,
       email: this.email,
@@ -47,6 +47,6 @@ export class ConsultantSignUpComponent implements OnInit {
     };
     this.consultantUserService.create(user).subscribe((response: ConsultantUser) => {});
 
-    this.router.navigate(['login-consultant']).then();
+    this.router.navigate(['consultant-signin']).then();
   }
 }

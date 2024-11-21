@@ -3,7 +3,7 @@
     "subtitle": "Consultant Log-In",
     "documentId": "Document ID",
     "password": "Password",
-    "logInButton": "Log-In",
+    "logInButton": "Sign-In",
     "registerLink": "or Register",
     "farmerLink": "Are you a Farmer?"
   },
@@ -21,7 +21,7 @@
     "documentType": "Select your Document Type",
     "documentId": "Document ID",
     "password": "Password",
-    "logInButton": "Log-In",
+    "logInButton": "Sign-In",
     "registerLink": "or Register",
     "consultantLink": "Are you a Consultant?"
   },
@@ -48,7 +48,7 @@
   "toolbar": {
     "home": "Home",
     "signUp": "Sign-Up",
-    "logIn": "Log-In"
+    "logIn": "Sign-In"
   },
   "footer": {
     "aboutUs": "About Us",

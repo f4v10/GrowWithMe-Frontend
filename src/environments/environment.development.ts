@@ -1,4 +1,4 @@
 export const environments = {
   production: false,
-  serverBasePath: 'http://localhost:3000/api/v1',
+  serverBasePath: 'https://grow-with-me-dmeaaadkepeqcffn.canadacentral-01.azurewebsites.net/api/v1',
 };

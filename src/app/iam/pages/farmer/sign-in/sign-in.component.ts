@@ -7,7 +7,7 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-farmer-signin',
+  selector: 'app-farmer-sign-in',
   standalone: true,
   imports: [
     ReactiveFormsModule,
@@ -15,8 +15,8 @@ import {TranslateModule} from "@ngx-translate/core";
     FormsModule,
     TranslateModule
   ],
-  templateUrl: './signin.component.html',
-  styleUrl: './signin.component.css'
+  templateUrl: './sign-in.component.html',
+  styleUrl: './sign-in.component.css'
 })
 export class FarmerSignInComponent implements OnChanges, OnInit {
   password = "";
@@ -70,6 +70,14 @@ export class FarmerSignInComponent implements OnChanges, OnInit {
       this.dataSource.data = this.dataSource.data;
     })
 
-    this.router.navigate(['home']).then();
+    this.router.navigate(['farmer/home']).then();
+  }
+
+  onNavigateFarmerSignUp() {
+    this.router.navigate(['farmer-signup']).then();
+  }
+
+  onNavigateConsultantSignIn() {
+    this.router.navigate(['consultant-signin']).then();
   }
 }
