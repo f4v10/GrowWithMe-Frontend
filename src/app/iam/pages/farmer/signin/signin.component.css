@@ -80,19 +80,6 @@
   margin-top: 10px;
 }
 
-.spacer {
-  flex: 1;
-}
-
-.consultant-link {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-  display: inline-block;
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
 .register-link:hover {
   text-decoration: none;
   font-weight: bold;
