@@ -8,13 +8,13 @@ import {ConsultantHomeComponent} from "./consultants/pages/consultant-home/consu
 import {CropsHomeComponent} from "./crops/pages/crops-home/crops-home.component";
 
 export const routes: Routes = [
-  {path: 'farmer-login', component: FarmerSignInComponent},
+  {path: 'farmer-signin', component: FarmerSignInComponent},
   {path: 'farmer-signup', component: FarmerSignUpComponent},
-  {path: 'consultant-login', component: ConsultantSignInComponent},
+  {path: 'consultant-signin', component: ConsultantSignInComponent},
   {path: 'consultant-signup', component: ConsultantSignUpComponent},
   {path: 'farmer/home', component: FarmerHomeComponent },
   {path: 'farmer/home/crops', component: CropsHomeComponent },
   {path: 'consultant/home', component: ConsultantHomeComponent },
-  {path: '', redirectTo: '/farmer-login', pathMatch: 'full'},
-  {path: '**', redirectTo: '/farmer-login'}
+  {path: '', redirectTo: '/farmer-signin', pathMatch: 'full'},
+  {path: '**', redirectTo: '/farmer-signin'}
 ];
