@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FarmerSignInComponent } from './signin.component';
+import { FarmerSignInComponent } from './sign-in.component';
 
 describe('SignInComponent', () => {
   let component: FarmerSignInComponent;

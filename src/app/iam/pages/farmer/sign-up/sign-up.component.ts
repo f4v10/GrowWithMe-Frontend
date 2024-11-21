@@ -6,7 +6,7 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-farmer-signup',
+  selector: 'app-farmer-sign-up',
   standalone: true,
   imports: [
     ReactiveFormsModule,
@@ -14,8 +14,8 @@ import {TranslateModule} from "@ngx-translate/core";
     FormsModule,
     TranslateModule
   ],
-  templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.css'
 })
 export class FarmerSignUpComponent implements OnInit {
   email = "";

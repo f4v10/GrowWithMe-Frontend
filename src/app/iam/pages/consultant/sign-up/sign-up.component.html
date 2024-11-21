@@ -1,0 +1,25 @@
+<div class="consultant-signup-container">
+  <h1 class="title">Grow With Me</h1>
+  <h2 class="subtitle">{{ 'consultant-sign-up.subtitle'|translate }}</h2>
+  <label class="label">{{ 'consultant-sign-up.documentId'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="{{ 'consultant-sign-up.documentId'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'consultant-sign-up.email'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="email" type="text" placeholder="{{ 'consultant-sign-up.email'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'consultant-sign-up.phone'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="{{ 'consultant-sign-up.phone'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'consultant-sign-up.password'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'consultant-sign-up.password'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'consultant-sign-up.confirmPassword'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="confirmPassword" type="text" placeholder="{{ 'consultant-sign-up.confirmPassword'|translate }}">
+  <br> <br>
+  <button class="signup-button" (click)="signUp()">{{ 'consultant-sign-up.signUpButton'|translate }}</button>
+</div>

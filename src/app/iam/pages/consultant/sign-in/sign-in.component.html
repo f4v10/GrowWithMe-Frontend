@@ -1,0 +1,16 @@
+<div class="consultant-login-container">
+  <h1 class="title">Grow With Me</h1>
+  <h2 class="subtitle">{{ 'consultant-sign-in.subtitle'|translate }}</h2>
+  <label class="label">{{ 'consultant-sign-in.documentId'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="{{ 'consultant-sign-in.documentId'|translate }}">
+  <br> <br>
+  <label class="label">{{ 'consultant-sign-in.password'|translate }}:</label>
+  <br>
+  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'consultant-sign-in.password'|translate }}">
+  <br> <br>
+  <button class="login-button" (click)="logIn()">{{ 'consultant-sign-in.logInButton'|translate }}</button>
+  <p (click)="onNavigateConsultantSignUp()" class="register-link">{{ 'consultant-sign-in.registerLink'|translate }}</p>
+  <span class="spacer"></span>
+  <p (click)="onNavigateFarmerSignIn()" class="farmer-link">{{ 'consultant-sign-in.farmerLink'|translate }}</p>
+</div>
