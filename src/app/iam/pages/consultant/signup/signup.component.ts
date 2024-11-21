@@ -37,7 +37,7 @@ export class ConsultantSignUpComponent implements OnInit {
     this.invalidUrl = this.route.snapshot.url.map(element => element.path).join('/');
   }
 
-  protected signUp() {
+  signUp() {
     const user: ConsultantUser = {
       id: 0,
       email: this.email,

@@ -71,6 +71,7 @@
 }
 
 .farmer-link {
+  padding: 20px;
   color: blue;
   cursor: pointer;
   text-decoration: underline;
