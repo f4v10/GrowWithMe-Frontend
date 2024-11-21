@@ -1,5 +1,5 @@
 {
-  "consultant-login": {
+  "consultant-signin": {
     "subtitle": "Consultant Log-In",
     "documentId": "Document ID",
     "password": "Password",
@@ -16,7 +16,7 @@
     "confirmPassword": "Confirm Password",
     "signUpButton": "Sign-Up"
   },
-  "farmer-login": {
+  "farmer-signin": {
     "subtitle": "Farmer Log-In",
     "documentType": "Select your Document Type",
     "documentId": "Document ID",

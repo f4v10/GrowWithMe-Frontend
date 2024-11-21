@@ -1,5 +1,5 @@
 {
-  "consultant-login": {
+  "consultant-signin": {
     "subtitle": "Iniciar Sesión Consultor",
     "documentId": "Documento de Identidad",
     "password": "Contraseña",
@@ -16,7 +16,7 @@
     "confirmPassword": "Confirmar Contraseña",
     "signUpButton": "Registrarse"
   },
-  "farmer-login": {
+  "farmer-signin": {
     "subtitle": "Iniciar Sesión Agricultor",
     "documentType": "Selecciona tu Tipo de Documento",
     "documentId": "Documento de Identidad",

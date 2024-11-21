@@ -17,7 +17,7 @@ import {TranslateModule} from "@ngx-translate/core";
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class FarmerSignupComponent implements OnInit {
+export class FarmerSignUpComponent implements OnInit {
   email = "";
   password = "";
   confirmPassword = "";
