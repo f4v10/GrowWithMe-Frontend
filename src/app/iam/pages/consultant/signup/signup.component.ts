@@ -16,7 +16,7 @@ import {TranslateModule} from "@ngx-translate/core";
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class ConsultantSignupComponent implements OnInit {
+export class ConsultantSignUpComponent implements OnInit {
   email = '';
   password = '';
   confirmPassword = '';

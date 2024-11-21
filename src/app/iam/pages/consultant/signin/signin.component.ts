@@ -7,17 +7,17 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-consultant-login',
+  selector: 'app-consultant-signin',
   standalone: true,
   imports: [
     FormsModule,
     RouterLink,
     TranslateModule,
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './signin.component.html',
+  styleUrl: './signin.component.css'
 })
-export class ConsultantLoginComponent implements OnInit {
+export class ConsultantSignInComponent implements OnInit {
   dni = "";
   password = "";
 

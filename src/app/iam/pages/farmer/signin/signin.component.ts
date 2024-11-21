@@ -7,7 +7,7 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-farmer-login',
+  selector: 'app-farmer-signin',
   standalone: true,
   imports: [
     ReactiveFormsModule,
@@ -15,10 +15,10 @@ import {TranslateModule} from "@ngx-translate/core";
     FormsModule,
     TranslateModule
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './signin.component.html',
+  styleUrl: './signin.component.css'
 })
-export class FarmerLoginComponent implements OnChanges, OnInit {
+export class FarmerSignInComponent implements OnChanges, OnInit {
   password = "";
   documentType = "";
   valueDocumentType = "";
