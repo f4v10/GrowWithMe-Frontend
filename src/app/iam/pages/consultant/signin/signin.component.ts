@@ -51,4 +51,8 @@ export class ConsultantSignInComponent implements OnInit {
   onNavigateConsultantSignUp() {
     this.router.navigate(['consultant-signup']).then();
   }
+
+  onNavigateFarmerSignIn() {
+    this.router.navigate(['farmer-signin']).then();
+  }
 }
