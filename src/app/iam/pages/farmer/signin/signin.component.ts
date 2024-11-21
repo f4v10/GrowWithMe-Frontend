@@ -70,6 +70,10 @@ export class FarmerSignInComponent implements OnChanges, OnInit {
       this.dataSource.data = this.dataSource.data;
     })
 
-    this.router.navigate(['home']).then();
+    this.router.navigate(['farmer/home']).then();
+  }
+
+  onNavigateFarmerSignUp() {
+    this.router.navigate(['farmer-signup']).then();
   }
 }
