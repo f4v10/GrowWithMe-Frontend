@@ -49,10 +49,10 @@ export class ConsultantSignInComponent implements OnInit {
   }
 
   onNavigateConsultantSignUp() {
-    this.router.navigate(['consultant-signup']).then();
+    this.router.navigate(['consultant-sign-up']).then();
   }
 
   onNavigateFarmerSignIn() {
-    this.router.navigate(['farmer-signin']).then();
+    this.router.navigate(['farmer-sign-in']).then();
   }
 }

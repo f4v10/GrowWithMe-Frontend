@@ -47,6 +47,6 @@ export class ConsultantSignUpComponent implements OnInit {
     };
     this.consultantUserService.create(user).subscribe((response: ConsultantUser) => {});
 
-    this.router.navigate(['consultant-signin']).then();
+    this.router.navigate(['consultant-sign-in']).then();
   }
 }
