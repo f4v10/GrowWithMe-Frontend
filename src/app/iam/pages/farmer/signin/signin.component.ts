@@ -76,4 +76,8 @@ export class FarmerSignInComponent implements OnChanges, OnInit {
   onNavigateFarmerSignUp() {
     this.router.navigate(['farmer-signup']).then();
   }
+
+  onNavigateConsultantSignIn() {
+    this.router.navigate(['consultant-signin']).then();
+  }
 }
