@@ -1,31 +1,42 @@
 <div class="farmer-signup-container">
-  <h1 class="title">Grow With Me</h1>
-  <h2 class="subtitle">{{ 'farmer-sign-up.subtitle'|translate }}</h2>
-  <label class="label">{{ 'farmer-sign-up.documentType'|translate }}:</label>
-  <select name="documentType" [(ngModel)]="documentType">
-    <option value="DNI">DNI</option>
-    <option value="RUC">RUC</option>
-  </select>
-  <br> <br>
-  <label class="label">{{ 'farmer-sign-up.documentId'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="valueDocumentType" type="text" placeholder="{{ 'farmer-sign-up.documentId'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'farmer-sign-up.email'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="email" type="text" placeholder="{{ 'farmer-sign-up.email'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'farmer-sign-up.phone'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="{{ 'farmer-sign-up.phone'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'farmer-sign-up.password'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'farmer-sign-up.password'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'farmer-sign-up.confirmPassword'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="confirmPassword" type="text" placeholder="{{ 'farmer-sign-up.confirmPassword'|translate }}">
-  <br> <br>
-  <button class="signup-button" (click)="signUp()">{{ 'farmer-sign-up.signUpButton'|translate }}</button>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="title">Grow With Me</mat-card-title>
+      <mat-card-subtitle class="subtitle">{{ 'farmer-sign-up.subtitle'|translate }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form id="farmer-signup-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="label" appearance="fill">
+          <mat-label>{{ 'farmer-sign-up.documentType'|translate }}</mat-label>
+          <mat-select formControlName="documentType">
+            <mat-option value="DNI">DNI</mat-option>
+            <mat-option value="RUC">RUC</mat-option>
+          </mat-select>
+          <mat-error *ngIf="isInvalidControl(form, 'documentType')">{{ errorMessagesForControl(form, 'documentType') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'farmer-sign-up.documentId'|translate }}" id="valueDocumentType" name="valueDocumentType" formControlName="valueDocumentType" required>
+          <mat-error *ngIf="isInvalidControl(form, 'valueDocumentType')">{{ errorMessagesForControl(form, 'valueDocumentType') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'farmer-sign-up.email'|translate }}" id="email" name="email" formControlName="email" required>
+          <mat-error *ngIf="isInvalidControl(form, 'email')">{{ errorMessagesForControl(form, 'email') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'farmer-sign-up.phone'|translate }}" id="phone" name="phone" formControlName="phone" required>
+          <mat-error *ngIf="isInvalidControl(form, 'phone')">{{ errorMessagesForControl(form, 'phone') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'farmer-sign-up.password'|translate }}" id="password" name="password" formControlName="password" required type="password">
+          <mat-error *ngIf="isInvalidControl(form, 'password')">{{ errorMessagesForControl(form, 'password') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'farmer-sign-up.confirmPassword'|translate }}" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" required type="password">
+          <mat-error *ngIf="isInvalidControl(form, 'confirmPassword')">{{ errorMessagesForControl(form, 'confirmPassword') }}</mat-error>
+        </mat-form-field>
+        <button class="signup-button" mat-raised-button color="primary" type="submit">{{ 'farmer-sign-up.signUpButton'|translate }}</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>
+

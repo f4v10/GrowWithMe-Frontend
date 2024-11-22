@@ -5,15 +5,33 @@ import {TranslateModule} from "@ngx-translate/core";
 import {AuthenticationFarmerService} from "../../../services/farmer/authentication-farmer.service";
 import {FarmerSignUpRequest} from "../../../model/farmer/farmer-sign-up.request";
 import {BaseFormComponent} from "../../../../shared/components/base-form/base-form.component";
+import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
+import {MatError, MatFormField} from "@angular/material/form-field";
+import {MatInput} from "@angular/material/input";
+import {MatButton} from "@angular/material/button";
+import {NgIf} from "@angular/common";
+import {MatOption, MatSelect} from "@angular/material/select";
 
 @Component({
   selector: 'app-farmer-sign-up',
   standalone: true,
   imports: [
-    ReactiveFormsModule,
-    RouterLink,
     FormsModule,
-    TranslateModule
+    RouterLink,
+    TranslateModule,
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardSubtitle,
+    MatCardContent,
+    MatFormField,
+    MatInput,
+    ReactiveFormsModule,
+    MatButton,
+    MatError,
+    NgIf,
+    MatSelect,
+    MatOption
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
