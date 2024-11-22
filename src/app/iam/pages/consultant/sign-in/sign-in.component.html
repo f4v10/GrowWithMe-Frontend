@@ -5,16 +5,16 @@
       <mat-card-subtitle class="subtitle">{{ 'consultant-sign-in.subtitle'|translate }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <form [formGroup]="form" (submit)="onSubmit()">
+      <form id="consultant-login-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
         <mat-form-field class="label" appearance="fill">
-          <input class="input-field" matInput placeholder="Email" id="email" name="email" required formControlName="email">
+          <input class="input-field" matInput placeholder="Email" id="email" name="email" formControlName="email" required>
           <mat-error *ngIf="isInvalidControl(form, 'email')">{{ errorMessagesForControl(form, 'email') }}</mat-error>
         </mat-form-field>
         <mat-form-field class="label">
-          <input class="input-field" matInput type="password" placeholder="Password" id="password" name="password" required formControlName="password">
+          <input class="input-field" matInput type="password" placeholder="Password" id="password" name="password" formControlName="password" required>
           <mat-error *ngIf="isInvalidControl(form, 'password')">{{ errorMessagesForControl(form, 'password')}}</mat-error>
         </mat-form-field>
-        <button class="login-button" mat-raised-button color="primary" (click)="onNavigateConsultantHome()" type="submit">{{ 'farmer-sign-in.logInButton'|translate }}</button>
+        <button class="login-button" mat-raised-button color="primary" type="submit">{{ 'farmer-sign-in.logInButton'|translate }}</button>
         <p (click)="onNavigateConsultantSignUp()" class="register-link">{{ 'consultant-sign-in.registerLink'|translate }}</p>
         <span class="spacer"></span>
         <p (click)="onNavigateFarmerSignIn()" class="farmer-link">{{ 'consultant-sign-in.farmerLink'|translate }}</p>
