@@ -1,8 +1,8 @@
 <div class="crops-home-container">
-  <h1 class="title">Crops</h1>
+  <h1 class="title">{{ 'crops-home.title'|translate }}</h1>
 
   <mat-card class="weather-card" appearance="outlined" *ngIf="selectedWeatherCondition">
-    <h2></h2>
+    <h2>{{ 'crops-home.weather'|translate }}</h2>
     <p>{{ selectedWeatherCondition.day }}</p>
   </mat-card>
 

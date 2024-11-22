@@ -6,6 +6,7 @@ import {Crop} from "../../model/crop.entity";
 import {CropService} from "../../services/crop.service";
 import {WeatherCondition} from "../../model/weather-condition.entity";
 import {WeatherApiService} from "../../services/weather-api.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-crops-home',
@@ -18,7 +19,8 @@ import {WeatherApiService} from "../../services/weather-api.service";
     MatCardTitle,
     MatCardSubtitle,
     MatCardContent,
-    NgIf
+    NgIf,
+    TranslateModule
   ],
   templateUrl: './crops-home.component.html',
   styleUrl: './crops-home.component.css'
