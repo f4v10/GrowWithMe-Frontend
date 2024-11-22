@@ -45,6 +45,10 @@
     "crops": "Cultivos",
     "finance": "Finanzas"
   },
+  "crops-home": {
+    "title": "Cultivos",
+    "weather": "El tiempo hoy"
+  },
   "toolbar": {
     "home": "Inicio",
     "signUp": "Registrarse",

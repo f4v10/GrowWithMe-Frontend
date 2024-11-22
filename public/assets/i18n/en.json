@@ -45,6 +45,10 @@
     "crops": "Crops",
     "finance": "Finance"
   },
+  "crops-home": {
+    "title": "Crops",
+    "weather": "Weather today"
+  },
   "toolbar": {
     "home": "Home",
     "signUp": "Sign-Up",
