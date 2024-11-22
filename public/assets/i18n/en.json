@@ -49,6 +49,14 @@
     "title": "Crops",
     "weather": "Weather today"
   },
+  "monitoring": {
+    "title": "Monitoring"
+  },
+  "contracts": {
+    "title": "Contracts",
+    "acceptButton": "Accept",
+    "declineButton": "Decline"
+  },
   "toolbar": {
     "home": "Home",
     "signUp": "Sign-Up",

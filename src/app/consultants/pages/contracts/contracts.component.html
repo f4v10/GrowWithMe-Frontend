@@ -1,0 +1,9 @@
+<div class="contracts-container">
+  <h1 class="title">{{ 'contracts.title' | translate }}</h1>
+  <div class="contract-card" *ngFor="let contract of contracts">
+    <h2>{{ contract.name }}</h2>
+    <button class="button" mat-stroked-button color="primary" (click)="onAccept(contract)">{{ 'contracts.acceptButton' | translate }}</button>
+    <button class="button" mat-stroked-button color="warn" (click)="onDecline(contract)">{{ 'contracts.declineButton' | translate }}</button>
+  </div>
+</div>
+

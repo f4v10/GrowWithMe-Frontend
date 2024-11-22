@@ -1,5 +1,5 @@
 <div class="consultant-home-container">
   <h1 class="title">{{ 'consultant-home.title'|translate }}</h1>
-  <button class="button" mat-stroked-button>{{ 'consultant-home.monitoring'|translate }}</button>
-  <button class="button" mat-stroked-button>{{ 'consultant-home.contracts'|translate }}</button>
+  <button class="button" mat-stroked-button (click)="onNavigateMonitoring()">{{ 'consultant-home.monitoring'|translate }}</button>
+  <button class="button" mat-stroked-button (click)="onNavigateContracts()">{{ 'consultant-home.contracts'|translate }}</button>
 </div>
