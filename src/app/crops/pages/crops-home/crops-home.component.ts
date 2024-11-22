@@ -40,8 +40,8 @@ export class CropsHomeComponent implements OnInit{
   }
 
   getAllCrops() {
-    this.cropService.getAll().subscribe((data: any) => {
-      this.crops = data['crops'];
+    this.cropService.getAll().subscribe((response: any) => {
+      this.crops = response;
       console.log(this.crops);
     });
   }
@@ -51,13 +51,13 @@ export class CropsHomeComponent implements OnInit{
       this.weatherConditions = conditions;
       this.codes = this.weatherConditions.map(condition => condition.code);
       this.rollDice();
-      console.log(this.weatherConditions);
+      //console.log(this.weatherConditions);
     });
   }
 
   rollDice() {
     const randomCode = this.codes[Math.floor(Math.random() * this.codes.length)];
     this.selectedWeatherCondition = this.weatherConditions.find(condition => condition.code === randomCode) || null;
-    console.log(randomCode);
+    //console.log(randomCode);
   }
 }
