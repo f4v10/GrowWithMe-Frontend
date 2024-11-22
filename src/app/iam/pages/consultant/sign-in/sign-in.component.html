@@ -5,12 +5,12 @@
       <mat-card-subtitle class="subtitle">{{ 'consultant-sign-in.subtitle'|translate }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <form id="consultant-login-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <mat-form-field class="label" appearance="fill">
           <input class="input-field" matInput placeholder="Email" id="email" name="email" formControlName="email" required>
           <mat-error *ngIf="isInvalidControl(form, 'email')">{{ errorMessagesForControl(form, 'email') }}</mat-error>
         </mat-form-field>
-        <mat-form-field class="label">
+        <mat-form-field class="label" appearance="fill">
           <input class="input-field" matInput type="password" placeholder="Password" id="password" name="password" formControlName="password" required>
           <mat-error *ngIf="isInvalidControl(form, 'password')">{{ errorMessagesForControl(form, 'password')}}</mat-error>
         </mat-form-field>
