@@ -49,8 +49,8 @@ export class ConsultantSignInComponent extends BaseFormComponent implements OnIn
   ngOnInit(): void {
     this.invalidUrl = this.route.snapshot.url.map(element => element.path).join('/');
     this.form = this.builder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(1)]]
     })
   }
 
@@ -61,6 +61,7 @@ export class ConsultantSignInComponent extends BaseFormComponent implements OnIn
     const signInRequest = new ConsultantSignInRequest(email, password);
     this.authenticationService.signIn(signInRequest);
     this.submitted = true;
+    this.onNavigateConsultantHome();
   }
 
   onNavigateConsultantHome() {
