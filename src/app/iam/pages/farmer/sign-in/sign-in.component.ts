@@ -1,10 +1,15 @@
-import {Component, inject, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {MatTableDataSource} from "@angular/material/table";
-import {FarmerUser} from "../../../model/farmer-user.entity";
-import {FarmerUserService} from "../../../services/farmer-user.service";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {Component, inject, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {BaseFormComponent} from "../../../../shared/components/base-form/base-form.component";
+import {AuthenticationFarmerService} from "../../../services/farmer/authentication-farmer.service";
+import {FarmerSignInRequest} from "../../../model/farmer/farmer-sign-in.request";
+import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
+import {MatError, MatFormField} from "@angular/material/form-field";
+import {MatInput} from "@angular/material/input";
+import {MatButton} from "@angular/material/button";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-farmer-sign-in',
@@ -13,63 +18,52 @@ import {TranslateModule} from "@ngx-translate/core";
     ReactiveFormsModule,
     RouterLink,
     FormsModule,
-    TranslateModule
+    TranslateModule,
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardSubtitle,
+    MatCardContent,
+    MatFormField,
+    MatInput,
+    MatButton,
+    MatError,
+    NgIf
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })
-export class FarmerSignInComponent implements OnChanges, OnInit {
-  password = "";
-  documentType = "";
-  valueDocumentType = "";
-
-  inputDNI = document.getElementById("DNI");
-  inputRUC = document.getElementById("RUC");
-
-  protected farmerUserService: FarmerUserService = inject(FarmerUserService);
-  protected farmerUserData: FarmerUser;
-  protected dataSource!: MatTableDataSource<any>;
+export class FarmerSignInComponent extends BaseFormComponent implements OnInit {
+  form!: FormGroup;
+  submitted = false;
 
   protected invalidUrl: string;
   private route: ActivatedRoute = inject(ActivatedRoute);
   private router: Router = inject(Router);
 
-  constructor() {
-    this.dataSource = new MatTableDataSource();
-    this.farmerUserData = new FarmerUser();
+  constructor(private builder: FormBuilder, private authenticationService: AuthenticationFarmerService) {
+    super();
     this.invalidUrl = '';
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['documentType']) {
-      if (this.documentType === "DNI") {
-        if (this.inputDNI) {
-          this.inputDNI.style.display = "block";
-        }
-        if (this.inputRUC) {
-          this.inputRUC.style.display = "none";
-        }
-      } else {
-        if (this.inputDNI) {
-          this.inputDNI.style.display = "none";
-        }
-        if (this.inputRUC) {
-          this.inputRUC.style.display = "block";
-        }
-      }
-    }
   }
 
   ngOnInit(): void {
     this.invalidUrl = this.route.snapshot.url.map(element => element.path).join('/');
+    this.form = this.builder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    })
   }
 
-  logIn() {
-    this.farmerUserService.create(this.farmerUserData).subscribe((response: FarmerUser) => {
-      this.dataSource.data.push(response);
-      this.dataSource.data = this.dataSource.data;
-    })
+  onSubmit() {
+    if (this.form.invalid) return;
+    let email = this.form.value.email;
+    let password = this.form.value.password;
+    const signInRequest = new FarmerSignInRequest(email, password);
+    this.authenticationService.signIn(signInRequest);
+    this.submitted = true;
+  }
 
+  onNavigateFarmerHome() {
     this.router.navigate(['farmer/home']).then();
   }
 

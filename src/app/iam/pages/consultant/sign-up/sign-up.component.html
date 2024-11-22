@@ -1,25 +1,33 @@
 <div class="consultant-signup-container">
-  <h1 class="title">Grow With Me</h1>
-  <h2 class="subtitle">{{ 'consultant-sign-up.subtitle'|translate }}</h2>
-  <label class="label">{{ 'consultant-sign-up.documentId'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="dni" type="text" placeholder="{{ 'consultant-sign-up.documentId'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'consultant-sign-up.email'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="email" type="text" placeholder="{{ 'consultant-sign-up.email'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'consultant-sign-up.phone'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="phone" type="text" placeholder="{{ 'consultant-sign-up.phone'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'consultant-sign-up.password'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="password" type="text" placeholder="{{ 'consultant-sign-up.password'|translate }}">
-  <br> <br>
-  <label class="label">{{ 'consultant-sign-up.confirmPassword'|translate }}:</label>
-  <br>
-  <input class="input-field" [(ngModel)]="confirmPassword" type="text" placeholder="{{ 'consultant-sign-up.confirmPassword'|translate }}">
-  <br> <br>
-  <button class="signup-button" (click)="signUp()">{{ 'consultant-sign-up.signUpButton'|translate }}</button>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="title">Grow With Me</mat-card-title>
+      <mat-card-subtitle class="subtitle">{{ 'consultant-sign-up.subtitle'|translate }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form id="consultant-signup-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'consultant-sign-up.documentId'|translate }}" id="dni" name="dni" formControlName="dni" required>
+          <mat-error *ngIf="isInvalidControl(form, 'dni')">{{ errorMessagesForControl(form, 'dni') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'consultant-sign-up.email'|translate }}" id="email" name="email" formControlName="email" required>
+          <mat-error *ngIf="isInvalidControl(form, 'email')">{{ errorMessagesForControl(form, 'email') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'consultant-sign-up.phone'|translate }}" id="phone" name="phone" formControlName="phone" required>
+          <mat-error *ngIf="isInvalidControl(form, 'phone')">{{ errorMessagesForControl(form, 'phone') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'consultant-sign-up.password'|translate }}" id="password" name="password" formControlName="password" required type="password">
+          <mat-error *ngIf="isInvalidControl(form, 'password')">{{ errorMessagesForControl(form, 'password') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="label" appearance="fill">
+          <input class="input-field" matInput placeholder="{{ 'consultant-sign-up.confirmPassword'|translate }}" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" required type="password">
+          <mat-error *ngIf="isInvalidControl(form, 'confirmPassword')">{{ errorMessagesForControl(form, 'confirmPassword') }}</mat-error>
+        </mat-form-field>
+        <button class="signup-button" mat-raised-button color="primary" type="submit">{{ 'consultant-sign-up.signUpButton'|translate }}</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>

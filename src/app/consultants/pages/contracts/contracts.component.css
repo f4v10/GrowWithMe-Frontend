@@ -1,0 +1,43 @@
+.contracts-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: green;
+}
+
+.contract-card {
+  border: 1px solid green;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  background-color: #fff;
+  text-align: left;
+}
+
+.button {
+  border: 1px solid green;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: white;
+  color: green;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: gray;
+  color: white;
+}

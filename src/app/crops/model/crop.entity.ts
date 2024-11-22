@@ -3,13 +3,13 @@ export class Crop {
     code: string;
     name: string;
     status: string;
-    cost: number;
+    cost: string;
 
     constructor() {
         this.id = 0;
         this.code = '';
         this.name = '';
         this.status = '';
-        this.cost = 0;
+        this.cost = '';
     }
 }

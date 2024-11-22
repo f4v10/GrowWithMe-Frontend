@@ -6,6 +6,8 @@ import {ConsultantSignUpComponent} from "./iam/pages/consultant/sign-up/sign-up.
 import {FarmerHomeComponent} from "./farmers/pages/farmer-home/farmer-home.component";
 import {ConsultantHomeComponent} from "./consultants/pages/consultant-home/consultant-home.component";
 import {CropsHomeComponent} from "./crops/pages/crops-home/crops-home.component";
+import {MonitoringComponent} from "./consultants/pages/monitoring/monitoring.component";
+import {ContractsComponent} from "./consultants/pages/contracts/contracts.component";
 
 export const routes: Routes = [
   {path: 'farmer-sign-in', component: FarmerSignInComponent},
@@ -15,6 +17,8 @@ export const routes: Routes = [
   {path: 'farmer/home', component: FarmerHomeComponent },
   {path: 'farmer/home/crops', component: CropsHomeComponent },
   {path: 'consultant/home', component: ConsultantHomeComponent },
+  {path: 'consultant/home/monitoring', component: MonitoringComponent },
+  {path: 'consultant/home/contracts', component: ContractsComponent },
   {path: '', redirectTo: '/farmer-sign-in', pathMatch: 'full'},
   {path: '**', redirectTo: '/farmer-sign-in'}
 ];

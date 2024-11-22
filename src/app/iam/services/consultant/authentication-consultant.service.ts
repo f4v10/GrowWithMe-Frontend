@@ -66,6 +66,7 @@ export class AuthenticationConsultantService {
     return this.http.post<ConsultantSignInResponse>(`${this.basePath}/authentication/sign-in`, signInRequest, this.httpOptions)
       .subscribe({
         next: (response) => {
+          console.log('Signed in successfully', response);
           this.signedIn.next(true);
           this.signedInUserId.next(response.id);
           this.signedInEmail.next(response.email);

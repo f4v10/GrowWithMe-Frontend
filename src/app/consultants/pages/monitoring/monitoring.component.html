@@ -1,0 +1,9 @@
+<div class="monitoring-container">
+  <h1 class="title">{{ 'monitoring.title'|translate }}</h1>
+  <div class="farmer-card" *ngFor="let farmer of farmers">
+    <h2>{{ farmer.name }}</h2>
+    <p>{{ farmer.email }}</p>
+    <button class="button" mat-stroked-button (click)="onChat(farmer)">Chat</button>
+  </div>
+</div>
+
