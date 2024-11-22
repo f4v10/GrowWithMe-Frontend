@@ -1,10 +1,15 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {FormsModule} from "@angular/forms";
-import {ConsultantUserService} from "../../../services/consultant-user.service";
-import {ConsultantUser} from "../../../model/consultant-user.entity";
-import {MatTableDataSource} from "@angular/material/table";
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {AuthenticationConsultantService} from "../../../services/consultant/authentication-consultant.service";
+import {BaseFormComponent} from "../../../../shared/components/base-form/base-form.component";
+import {ConsultantSignInRequest} from "../../../model/consultant/consultant-sign-in.request";
+import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
+import {MatError, MatFormField} from "@angular/material/form-field";
+import {MatInput} from "@angular/material/input";
+import {MatButton} from "@angular/material/button";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-consultant-sign-in',
@@ -13,38 +18,52 @@ import {TranslateModule} from "@ngx-translate/core";
     FormsModule,
     RouterLink,
     TranslateModule,
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardSubtitle,
+    MatCardContent,
+    MatFormField,
+    MatInput,
+    ReactiveFormsModule,
+    MatButton,
+    MatError,
+    NgIf
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })
-export class ConsultantSignInComponent implements OnInit {
-  dni = "";
-  password = "";
-
-  protected consultantUserService: ConsultantUserService = inject(ConsultantUserService);
-  protected consultantUserData: ConsultantUser;
-  protected dataSource!: MatTableDataSource<any>;
+export class ConsultantSignInComponent extends BaseFormComponent implements OnInit {
+  form!: FormGroup;
+  submitted = false;
 
   protected invalidUrl: string;
   private route: ActivatedRoute = inject(ActivatedRoute);
   private router: Router = inject(Router);
 
-  constructor() {
-    this.dataSource = new MatTableDataSource();
-    this.consultantUserData = new ConsultantUser();
+  constructor(private builder: FormBuilder, private authenticationService: AuthenticationConsultantService) {
+    super();
     this.invalidUrl = '';
   }
 
   ngOnInit(): void {
     this.invalidUrl = this.route.snapshot.url.map(element => element.path).join('/');
+    this.form = this.builder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    })
   }
 
-  protected logIn() {
-    this.consultantUserService.create(this.consultantUserData).subscribe((response: ConsultantUser) => {
-      this.dataSource.data.push(response);
-      this.dataSource.data = this.dataSource.data;
-    })
+  onSubmit() {
+    if (this.form.invalid) return;
+    let email = this.form.value.email;
+    let password = this.form.value.password;
+    const signInRequest = new ConsultantSignInRequest(email, password);
+    this.authenticationService.signIn(signInRequest);
+    this.submitted = true;
+  }
 
+  onNavigateConsultantHome() {
     this.router.navigate(['consultant/home']).then();
   }
 
