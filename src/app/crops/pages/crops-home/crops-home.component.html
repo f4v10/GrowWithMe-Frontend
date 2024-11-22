@@ -1,5 +1,11 @@
 <div class="crops-home-container">
   <h1 class="title">Crops</h1>
+
+  <mat-card class="weather-card" appearance="outlined" *ngIf="selectedWeatherCondition">
+    <h2></h2>
+    <p>{{ selectedWeatherCondition.day }}</p>
+  </mat-card>
+
   <button mat-stroked-button class="add-crop-button">Add crop</button>
 
   <mat-card class="crops-details" appearance="outlined" *ngFor="let crop of crops">
