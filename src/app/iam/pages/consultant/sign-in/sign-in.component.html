@@ -14,7 +14,7 @@
           <input class="input-field" matInput type="password" placeholder="Password" id="password" name="password" formControlName="password" required>
           <mat-error *ngIf="isInvalidControl(form, 'password')">{{ errorMessagesForControl(form, 'password')}}</mat-error>
         </mat-form-field>
-        <button class="login-button" mat-raised-button color="primary" type="submit" (click)="onNavigateConsultantHome()">{{ 'farmer-sign-in.logInButton'|translate }}</button>
+        <button class="login-button" mat-raised-button color="primary" (click)="onNavigateConsultantHome()">{{ 'farmer-sign-in.logInButton'|translate }}</button>
         <p (click)="onNavigateConsultantSignUp()" class="register-link">{{ 'consultant-sign-in.registerLink'|translate }}</p>
         <span class="spacer"></span>
         <p (click)="onNavigateFarmerSignIn()" class="farmer-link">{{ 'consultant-sign-in.farmerLink'|translate }}</p>
